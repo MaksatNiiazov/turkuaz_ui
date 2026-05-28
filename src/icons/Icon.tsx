@@ -2,9 +2,11 @@ import type { ReactNode } from "react";
 
 export type IconName =
   | "activity"
+  | "arrow"
   | "banknote"
   | "ban"
   | "database"
+  | "dashboard"
   | "file"
   | "menu"
   | "moon"
@@ -13,6 +15,7 @@ export type IconName =
   | "refresh"
   | "search"
   | "shield"
+  | "sliders"
   | "sun"
   | "webhook"
   | "building"
@@ -32,6 +35,12 @@ export function Icon({ name, size = 18 }: { name: IconName; size?: number }) {
 
   const paths: Record<IconName, ReactNode> = {
     activity: <path d="M4 12h4l2-6 4 12 2-6h4" />,
+    arrow: (
+      <>
+        <path d="M7 17 17 7" />
+        <path d="M9 7h8v8" />
+      </>
+    ),
     banknote: (
       <>
         <rect x="3" y="6" width="18" height="12" rx="2" />
@@ -50,6 +59,14 @@ export function Icon({ name, size = 18 }: { name: IconName; size?: number }) {
         <ellipse cx="12" cy="5" rx="8" ry="3" />
         <path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5" />
         <path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" />
+      </>
+    ),
+    dashboard: (
+      <>
+        <rect x="3" y="3" width="7" height="8" rx="1" />
+        <rect x="14" y="3" width="7" height="5" rx="1" />
+        <rect x="14" y="12" width="7" height="9" rx="1" />
+        <rect x="3" y="15" width="7" height="6" rx="1" />
       </>
     ),
     file: (
@@ -96,6 +113,13 @@ export function Icon({ name, size = 18 }: { name: IconName; size?: number }) {
       </>
     ),
     shield: <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />,
+    sliders: (
+      <>
+        <path d="M4 7h8M16 7h4M4 17h4M12 17h8" />
+        <circle cx="14" cy="7" r="2" />
+        <circle cx="10" cy="17" r="2" />
+      </>
+    ),
     sun: (
       <>
         <circle cx="12" cy="12" r="4" />
